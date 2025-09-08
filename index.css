@@ -15,19 +15,34 @@ html {
 }
 
 body {
-    background-color: #F8F4E1;
+    background-image: url("./pict/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     color: var(--dark-kopi);
 }
 
 header {
-    background-color: var(--dark-kopi);
     position: sticky;
     top: 0;
-    color: white;
     padding: 1rem;
-    z-index: 2;
+    z-index: 1000;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+    /* animasi halus */
+    background: transparent;
+    color: white;
 }
+
+header.scrolled {
+    background: white;
+    color: var(--dark-kopi);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    /* opsional, biar keliatan timbul */
+}
+
 
 header h1 {
     font-size: 1.7rem;
@@ -47,13 +62,19 @@ header .hamburger {
     float: right;
     background-color: transparent;
     color: white;
-    border: 1px solid white;
+    border: 1.8px solid white;
+    font-size: 1rem;
     width: auto;
     padding: 0.7rem 1rem;
     border-radius: 20px;
     cursor: pointer;
     font-weight: bold;
     margin-right: 5px;
+}
+
+button.scroll {
+    color: var(--dark-kopi);
+    border: 1.8px solid var(--dark-kopi);
 }
 
 .btn button:hover {
@@ -81,9 +102,9 @@ section h1 {
     position: relative;
     display: inline-block;
     padding-bottom: 1rem;
-    margin: 1rem auto;
+    margin: 4rem auto 3rem auto;
     width: 100%;
-    z-index: -1;
+    z-index: 5;
 }
 
 section h1::after {
@@ -98,61 +119,77 @@ section h1::after {
 
 
 section nav {
-  width: 100%;
-  top:4rem;
-  position: sticky;
-  background-color: #AF8F6F;
-  margin: 0;
-  font-size: 1.2rem;
-  padding: 1rem;
-  overflow: hidden;
-  max-height: 0;
-  opacity: 0;
-  pointer-events: none;
+    width: 100%;
+    top: 4rem;
+    position: sticky;
+    margin: 0;
+    font-size: 1.5rem;
+    padding: 1rem;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    pointer-events: none;
+    background: rgba(255, 255, 255, 0.1);
+    /* transparan putih */
+    backdrop-filter: blur(10px);
+    /* efek blur */
+    -webkit-backdrop-filter: blur(10px);
 }
 
 nav.active {
-  animation: slideDown 0.6s ease-out forwards;
-  pointer-events: auto;
+    animation: slideDown 0.6s ease-out forwards;
+    pointer-events: auto;
 }
 
 nav.closing {
-  animation: slideUp 0.4s ease-in forwards;
-  pointer-events: none;
+    animation: slideUp 0.4s ease-in forwards;
+    pointer-events: none;
 }
 
+nav.scrolled {
+    background-color: white;
+    color: var(--dark-kopi);
+
+}
+
+
+
 @keyframes slideDown {
-  0% {
-    max-height: 0;
-    opacity: 1;
-    transform: translateY(-20px);
-  }
-  60% {
-    max-height: 500px;
-    opacity: 1;
-    transform: translateY(0);
-  }
-  80% {
-    transform: translateY(-10px);
-  }
-  100% {
-    max-height: 500px;
-    opacity: 1;
-    transform: translateY(0);
-  }
+    0% {
+        max-height: auto;
+        opacity: 1;
+        transform: translateY(-20px);
+    }
+
+    60% {
+        max-height: auto;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    80% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        max-height: 300px;
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes slideUp {
-  0% {
-    max-height: 500px;
-    opacity: 1;
-    transform: translateY(0);
-  }
-  100% {
-    max-height: 0;
-    opacity: 1;
-    transform: translateY(-20px);
-  }
+    0% {
+        max-height: 200px;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        max-height: 0;
+        opacity: 1;
+        transform: translateY(-20px);
+    }
 }
 
 
@@ -169,53 +206,71 @@ nav li {
     display: block;
     text-align: left;
     color: white;
-    
-}
 
+}
+nav li.scrolled {
+    color: var(--dark-kopi);
+}
 nav li:hover {
     background-color: #865439;
     color: white;
     cursor: pointer;
-     border-radius: 10px;
+    border-radius: 10px;
 }
 
 nav li:focus {
     background-color: #865439;
     color: white;
     cursor: pointer;
-   
+
 }
 
-nav a{
+nav a {
     text-decoration: none;
     color: #F8F4E1;
+}
+
+#typeIt{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2rem;
+    color: white;
+    z-index: 9999;
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin-top: 20%;
+    margin-bottom: -20%;
+    padding: 1rem;
+   
 }
 
 section article {
     width: 100%;
     text-align: justify;
+    background-color: white;
 
 }
 
 .content {
     display: flex;
     flex-direction: column;
-    background-color: white;
-    padding: 20px;
-    border-radius: 20px;
-    margin: 1rem;
+    background-color: #F4f4f4;
+    padding: 2rem;
+    border-radius: 15px;
+    margin: 2rem 1.5rem;
+
 }
 
 .content .pict {
-    width: 70%;
-     margin-left: auto;
+    width: 60%;
+    margin-left: auto;
     margin-right: auto;
 }
 
 
-    .pict img {
-    max-width: 100%;   
-    height: auto;  
+.pict img {
+    max-width: 100%;
+    height: auto;
     border-radius: 100%;
     border: 5px solid var(--dark-kopi);
     box-shadow: 3px 3px 5px gray;
@@ -235,45 +290,50 @@ section article {
     text-align: center;
 }
 
-footer{
-    background-color: #212121;
+footer {
+    background-color: var(--dark-kopi);
     color: white;
     padding: 2rem;
     text-align: center;
 }
 
-@media (min-width: 768px){
-    section{
+@media (min-width: 768px) {
+    section {
         flex-direction: row;
     }
-    section nav{
+
+    section nav {
         width: 30%;
         max-height: auto;
         opacity: 1;
-        overflow:auto;
+        overflow: auto;
         display: block;
         min-height: 600px;
         max-height: auto;
         pointer-events: all;
-    
+
     }
-    .hamburger{
+
+    .hamburger {
         display: none;
     }
-    .content{
+
+    .content {
         flex-direction: row;
     }
-    .content .pict{
+
+    .content .pict {
         width: 40%;
         margin: 0;
     }
-    .pict img{
-       width: 80%;
-       margin-top: 25%;
+
+    .pict img {
+        width: 80%;
+        margin-top: 25%;
     }
-    .content .desc{
+
+    .content .desc {
         width: 60%;
     }
 
 }
-

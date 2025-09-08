@@ -30,7 +30,7 @@ header {
 }
 
 header h1 {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
 }
 
 header .btn {
@@ -39,7 +39,7 @@ header .btn {
 }
 
 header .hamburger {
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     cursor: pointer;
 }
 
@@ -49,7 +49,7 @@ header .hamburger {
     color: white;
     border: 1px solid white;
     width: auto;
-    padding: 0.5rem 0.7rem;
+    padding: 0.7rem 1rem;
     border-radius: 20px;
     cursor: pointer;
     font-weight: bold;
@@ -103,7 +103,8 @@ section nav {
   position: sticky;
   background-color: #AF8F6F;
   margin: 0;
-  padding: 0;
+  font-size: 1.2rem;
+  padding: 1rem;
   overflow: hidden;
   max-height: 0;
   opacity: 0;
@@ -164,22 +165,25 @@ nav li {
     line-height: 1.5;
     width: 100%;
     list-style: none;
-    padding: 8px 20px;
+    padding: 1rem 1.5rem;
     display: block;
-    text-align: center;
+    text-align: left;
     color: white;
+    
 }
 
 nav li:hover {
     background-color: #865439;
     color: white;
     cursor: pointer;
+     border-radius: 10px;
 }
 
 nav li:focus {
     background-color: #865439;
     color: white;
     cursor: pointer;
+   
 }
 
 nav a{
@@ -199,11 +203,11 @@ section article {
     background-color: white;
     padding: 20px;
     border-radius: 20px;
-    margin: 2rem;
+    margin: 1rem;
 }
 
 .content .pict {
-    width: 60%;
+    width: 70%;
      margin-left: auto;
     margin-right: auto;
 }
@@ -215,7 +219,6 @@ section article {
     border-radius: 100%;
     border: 5px solid var(--dark-kopi);
     box-shadow: 3px 3px 5px gray;
-   
     display: block;
 }
 
@@ -249,7 +252,7 @@ footer{
         opacity: 1;
         overflow:auto;
         display: block;
-        min-height: 500px;
+        min-height: 600px;
         max-height: auto;
         pointer-events: all;
     

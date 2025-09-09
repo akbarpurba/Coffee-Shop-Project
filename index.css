@@ -123,7 +123,7 @@ section h1::after {
 
 section nav {
     width: 100%;
-    top: 4.8rem;
+    top: 4.5rem;
     position: sticky;
     margin: 0;
     font-size: 1.5rem;
@@ -157,42 +157,39 @@ nav.scrolled {
 
 }
 
-
-
 @keyframes slideDown {
-    0% {
-        max-height: 0;
-        transform: translateY(-30px) scaleY(0.6);
-    }
-
-    60% {
-        max-height: 400px;
-        /* atur sesuai isi menu */
-        transform: translateY(0) scaleY(1.05);
-    }
-
-    80% {
-        transform: translateY(-8px) scaleY(0.98);
-    }
-
-    100% {
-        max-height: 400px;
-        transform: translateY(0) scaleY(1);
-    }
+  0% {
+    max-height: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    max-height: 400px; /* sesuaikan isi menu */
+    transform: translateY(0);
+  }
 }
 
-/* animasi slide up */
 @keyframes slideUp {
-    0% {
-        max-height: 400px;
-        transform: translateY(0) scaleY(1);
-    }
-
-    100% {
-        max-height: 0;
-        transform: translateY(-30px) scaleY(0.6);
-    }
+  0% {
+    max-height: 400px;
+    transform: translateY(0);
+  }
+  100% {
+    max-height: 0;
+    transform: translateY(-10px);
+  }
 }
+
+/* pakai timing function lembut */
+nav.active {
+  animation: slideDown 0.7s ease-in-out forwards;
+  pointer-events: auto;
+}
+
+nav.closing {
+  animation: slideUp 0.5s ease-in-out forwards;
+  pointer-events: none;
+}
+
 
 nav ul {
     position: relative;

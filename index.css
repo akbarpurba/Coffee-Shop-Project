@@ -123,14 +123,12 @@ section h1::after {
 
 section nav {
     width: 100%;
-    top: 4rem;
+    top: 4.8rem;
     position: sticky;
     margin: 0;
     font-size: 1.5rem;
-    padding: 1rem;
     overflow: hidden;
     max-height: 0;
-    opacity: 0;
     pointer-events: none;
     background: rgba(255, 255, 255, 0.1);
     /* transparan putih */
@@ -138,16 +136,18 @@ section nav {
     /* efek blur */
     -webkit-backdrop-filter: blur(10px);
     z-index: 1000;
-    box-shadow: 1px 1px 3px #212121;
+    box-shadow: 1px 1px 3px gray;
 }
 
+/* buka menu */
 nav.active {
-    animation: slideDown 0.6s ease-out forwards;
+    animation: slideDown 0.6s cubic-bezier(.25, .8, .25, 1) forwards;
     pointer-events: auto;
 }
 
+/* tutup menu */
 nav.closing {
-    animation: slideUp 0.4s ease-in forwards;
+    animation: slideUp 0.4s cubic-bezier(.55, .06, .68, .19) forwards;
     pointer-events: none;
 }
 
@@ -161,42 +161,38 @@ nav.scrolled {
 
 @keyframes slideDown {
     0% {
-        max-height: auto;
-        opacity: 1;
-        transform: translateY(-20px);
+        max-height: 0;
+        transform: translateY(-30px) scaleY(0.6);
     }
 
     60% {
-        max-height: auto;
-        opacity: 1;
-        transform: translateY(0);
+        max-height: 400px;
+        /* atur sesuai isi menu */
+        transform: translateY(0) scaleY(1.05);
     }
 
     80% {
-        transform: translateY(-10px);
+        transform: translateY(-8px) scaleY(0.98);
     }
 
     100% {
-        max-height: 300px;
-        opacity: 1;
-        transform: translateY(0);
+        max-height: 400px;
+        transform: translateY(0) scaleY(1);
     }
 }
 
+/* animasi slide up */
 @keyframes slideUp {
     0% {
-        max-height: 200px;
-        opacity: 1;
-        transform: translateY(0);
+        max-height: 400px;
+        transform: translateY(0) scaleY(1);
     }
 
     100% {
         max-height: 0;
-        opacity: 1;
-        transform: translateY(-20px);
+        transform: translateY(-30px) scaleY(0.6);
     }
 }
-
 
 nav ul {
     position: relative;
@@ -251,15 +247,17 @@ nav a {
     position: fixed;
 
 }
-#menu{
+
+#menu {
     margin: 0;
     padding: 1rem;
 }
+
 section article {
     width: 100%;
     text-align: justify;
     background-color: white;
-    
+
 
 }
 
@@ -268,18 +266,19 @@ section article {
     flex-direction: column;
     color: #212121;
     aspect-ratio: 1 / 1;
-    margin:5rem 0.5rem;
+    margin: 5rem 0.5rem;
     border-radius: 5%;
     z-index: 2;
     box-shadow: 2px 2px 5px gray;
 }
 
-.content-menu .pict{
+.content-menu .pict {
     width: 100%;
     height: 60%;
     position: relative;
 }
-.pict img{
+
+.pict img {
     width: 100%;
     border-radius: 5%;
     margin-left: auto;
@@ -288,10 +287,10 @@ section article {
     z-index: -1;
 }
 
-.desc{
-    height:40%;
+.desc {
+    height: 40%;
     margin-bottom: 1rem;
-    position:static;
+    position: static;
     border-radius: 5%;
     background-color: white;
     z-index: 1;
@@ -299,36 +298,37 @@ section article {
     overflow: visible;
 }
 
-.desc h2{
+.desc h2 {
     text-align: center;
     text-decoration: underline;
     margin-top: -1.8rem;
 }
 
-.desc .wavy{
+.desc .wavy {
     width: 100%;
     margin-top: -4rem;
-    
+
 }
 
-.desc .price{
+.desc .price {
     float: right;
-    margin-right:1.5rem;
+    margin-right: 1.5rem;
     background-color: var(--light-kopi);
     color: white;
     border: none;
-    padding:0.5rem 1.5rem;
+    padding: 0.5rem 1.5rem;
     font-size: 1rem;
     border-radius: 10px;
-    top:100%;
+    top: 100%;
 }
 
-.desc .text{
+.desc .text {
     margin-top: -1rem;
     padding: 0 1.3rem;
     text-align: justify;
     background-color: white;
 }
+
 .content h2 {
     text-align: center;
 }
@@ -346,8 +346,9 @@ footer {
         display: flex;
         flex-direction: row;
         width: 100%;
-        
+
     }
+
     header h1 {
         font-size: 2.2rem;
         width: 50%;
@@ -414,7 +415,7 @@ footer {
         display: none;
     }
 
-    #menu{
+    #menu {
         font-size: 2rem;
     }
 
@@ -422,25 +423,27 @@ footer {
         flex-direction: column;
     }
 
-    .content{
+    .content {
         flex-direction: row;
         width: 100%;
         margin: 1.5rem;
         font-size: 1.5rem;
     }
 
-    .content .pict{
+    .content .pict {
         width: 40%;
     }
-    .pict img{
+
+    .pict img {
         width: 65%;
         margin-left: auto;
         margin-right: auto;
         display: block;
-    } 
-    .content .desc{
+    }
+
+    .content .desc {
         width: 60%;
-        padding:0 2.3rem;
+        padding: 0 2.3rem;
     }
 
     #typeIt {

@@ -26,19 +26,21 @@ window.addEventListener("scroll", function() {
   const btn = document.querySelector(".btn button"); 
   const nav = document.querySelector("nav");
   const listItems = document.querySelectorAll("nav li"); 
-  
+  const desk = document.querySelectorAll(".nav-list li");
   if (window.scrollY > 50) { 
     header.classList.add("scrolled");
     nav.classList.add("scrolled");
     btn.classList.add("scroll");
     listItems.forEach(li => li.classList.add("scrolled")); 
+    desk.forEach(list => list.classList.add("scrolled"));
   } else {
     header.classList.remove("scrolled");
     nav.classList.remove("scrolled");
     btn.classList.remove("scroll");
     listItems.forEach(li => li.classList.remove("scrolled")); 
+    desk.forEach(list => list.classList.remove("scrolled"));
   }
-});
+ });
 
 new TypeIt("#typeIt", {
   speed: 50,
@@ -48,7 +50,7 @@ new TypeIt("#typeIt", {
 .type("Selamat datang di AkbarCoffee!")
 .pause(1500)
 .delete()
-.type("Nikmati kopi terbaik setiap hari ☕")
+.type("Nikmati kopi terbaik setiap hari")
 .pause(1500)
 .delete()
 .type("Suasana hangat, tempat nyaman, kopi istimewa.")

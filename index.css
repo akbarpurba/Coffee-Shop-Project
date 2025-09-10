@@ -12,6 +12,7 @@
 
 html {
     font-size: 16px;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -126,7 +127,7 @@ section nav {
     top: 4.5rem;
     position: sticky;
     margin: 0;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     overflow: hidden;
     max-height: 0;
     pointer-events: none;
@@ -238,24 +239,93 @@ nav a {
     display: block;
     text-align: center;
     width: 100%;
-    margin-top: 20%;
-    margin-bottom: -20%;
+    margin-top: 8%;
     padding: 1rem 0.5rem;
     position: fixed;
 
 }
 
+.sub-judul{
+    margin-top: 18%;
+    text-align: center;
+    font-size: 2rem ;
+    display: block;
+    z-index: 0;
+    width: 100%;
+    letter-spacing: 5px;
+    color: white;
+    position: fixed;
+}
+
+.explore{
+    background-color: white;
+   text-align: center;
+    display: flex;
+    margin-top: 30%;
+    transform: translateX(100%);
+    z-index: 0;
+    flex-direction: column;
+   border-radius: 10px;
+    justify-content: center;
+    position:fixed;
+    max-height: 2rem;
+    font-size: -1rem;
+    text-decoration: none;
+    padding: 1rem;
+    color: #543310;
+    transition: all 0.3s ease-out;
+}
+
+.title {
+    transform:translateY(-30px);
+  opacity: 0; 
+  transition: all 0.3s ease;
+}
+
+#explore:hover{
+    max-height: 3rem;
+    transition: all 0.3s ease-in;
+    color: white;
+    background: transparent;
+    border: 1px solid white;
+}
+
+#explore:hover .title {
+  opacity: 1;
+  transform:translateY(-12px);
+}
+
+#explore:hover .arrow{
+    transform: translateY(-15px);
+    transition: all 0.3s ease-in;
+}
+
+.explore .arrow{
+    width: auto;
+    transition: all 0.3s ease-out;
+    margin-top: 1.5rem;
+    z-index: 0;
+}
+.waves{
+    margin:10rem 0 -1rem 0;
+    width: 100%;
+    z-index: 1;
+}
 #menu {
     margin: 0;
     padding: 1rem;
+    z-index: 1;
 }
-
+#title-menu{
+    margin: 0;
+    padding: 1rem;
+    z-index: 1;
+}
 section article {
     width: 100%;
     text-align: justify;
     background-color: white;
-
-
+    z-index: 1;
 }
 
 .content-menu {
@@ -363,7 +433,9 @@ footer {
         justify-content: right;
     }
 
-
+    .nav-list a{
+        text-decoration: none;
+    }
 
     .nav-list li {
         display: inline-block;
@@ -446,6 +518,10 @@ footer {
     #typeIt {
         font-size: 2rem;
         margin-top: 5rem;
+    }
+
+    .explore{
+        width: 10%;
     }
 
     .svg {

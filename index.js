@@ -1,7 +1,6 @@
 
 const hamburger = document.getElementById("hamburger");
 const nav = document.querySelector("section nav");
-
 hamburger.addEventListener("click", () => {
   if (nav.classList.contains("active")) {
     nav.classList.remove("active");
@@ -41,6 +40,8 @@ window.addEventListener("scroll", function() {
     desk.forEach(list => list.classList.remove("scrolled"));
   }
  });
+
+
 
 new TypeIt("#typeIt", {
   speed: 50,

@@ -83,8 +83,8 @@ button.scroll {
 
 .btn button:hover {
     background-color: white;
-    color: var(--dark-kopi);
-    border: 2px solid #AF8F6F;
+    color:#0c141c;
+    border: 3px solid #e6e6e6;
 }
 
 header h1 {
@@ -231,64 +231,74 @@ nav a {
     color: #F8F4E1;
 }
 
-#typeIt {
+.home{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    justify-content: center;
+    padding: 10% 5%;
+    z-index: 0;
+}
+
+.home #typeIt {
     font-family: 'Courier New', Courier, monospace;
     font-size: 1.2rem;
     color: white;
-    height: auto;
-    z-index: -9;
+    height:fit-content;
     display: block;
     text-align: center;
     width: 100%;
-    margin: 8% 0 5% 0;
-    padding: 0 0.5rem;
-    position: fixed;
 
 }
 
-.sub-judul{
-    margin-top: 18%;
+.home .sub-judul{
     text-align: center;
     font-size: 2rem ;
     display: block;
     z-index: 0;
+    margin: 0;
+    padding: 0;
     width: 100%;
     letter-spacing: 5px;
     color: white;
-    position: fixed;
 }
 
-.explore{
-    background-color: white;
-   text-align: center;
-    display: flex;
-    margin-top: 30%;
-    transform: translateX(100%);
-    z-index: 0;
-    flex-direction: column;
-   border-radius: 10px;
-    justify-content: center;
-    position:fixed;
-    max-height: 2rem;
-    font-size: -1rem;
-    text-decoration: none;
-    padding: 1rem;
-    color: #543310;
-    transition: all 0.3s ease-out;
+.home .explore {
+  background-color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+   width:fit-content;
+   max-height: 3rem; 
+  margin-top: 1rem;
+  aspect-ratio: 1 / 1;
+  border-radius: 100%;
+  font-size: 1.2rem;
+  text-decoration: none;
+  padding: 0.5rem;
+  color: #0c141c;
+  z-index: 0;
+  border: 2px solid #e6e6e6;
+  transition: all 0.3s ease-out;
 }
+
 
 .title {
     transform:translateY(-30px);
   opacity: 0; 
-  transition: all 0.3s ease;
+  transition: all 0.1s ease;
 }
 
 #explore:hover{
-    max-height: 3rem;
+    max-height: 4rem;
     transition: all 0.3s ease-in;
     color: white;
+    border-radius: 10px;
+    aspect-ratio:unset ;
     background: transparent;
-    border: 1px solid white;
+    border: 1px solid #e6e6e6;
 }
 
 #explore:hover .title {
@@ -298,7 +308,7 @@ nav a {
 
 #explore:hover .arrow{
     transform: translateY(-15px);
-    transition: all 0.3s ease-in;
+    transition: all 0.5s ease-in;
 }
 
 .explore .arrow{
@@ -308,7 +318,7 @@ nav a {
     z-index: 0;
 }
 .waves{
-    margin:10rem 0 -1rem 0;
+    margin:12rem 0 -1rem 0;
     width: 100%;
     z-index: 1;
 }

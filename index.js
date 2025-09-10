@@ -42,19 +42,27 @@ window.addEventListener("scroll", function() {
  });
 
 
-
 new TypeIt("#typeIt", {
   speed: 50,
   waitUntilVisible: true,
   loop: true,
 })
-.type("Selamat datang di AkbarCoffee!")
+.type("The Antidote to the Ordinary")
 .pause(1500)
 .delete()
-.type("Nikmati kopi terbaik setiap hari")
+.type("Fuel for Dreamers")
 .pause(1500)
 .delete()
-.type("Suasana hangat, tempat nyaman, kopi istimewa.")
-.pause(2000)
+.type("Defy the Grind. Savor the Cup")
+.pause(1500)
+.delete()
+.type("Where Time Melts Away")
+.pause(1500)
+.delete()
+.type("The Alchemy of Aroma")
+.pause(1500)
+.delete()
+.type("Solace in Every Sip")
+.pause(1500)
 .delete()
 .go();

@@ -4,8 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AkbarCoffe</title>
+    <title>AkbarShop</title>
     <link rel="stylesheet" href="./index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
 </head>
@@ -39,16 +41,19 @@
         <div class="btn" id="lgn"><button
                 onclick="alert(`This feature is not available yet.\nPlease check back later!!`)">Masuk</button></div>
     </header>
+
     <section>
         <nav id="nav">
-            <!--NAVBAR MOBILE    -->
+
             <ul>
-                <a href="#menu">
+                <a href="#">
                     <li>Home</li>
                 </a>
 
-                <li>Menu</li>
+                <a href="#menu">
 
+                    <li>Menu</li>
+                </a>
                 <a href="#menu">
                     <li>About</li>
                 </a>
@@ -61,12 +66,12 @@
         </nav>
         <div class="home">
             <p id="typeIt"></p>
-            <h2 class="sub-judul">AkbarCoffe</h2>
+            <h2 class="sub-judul">AkbarCoffee</h2>
             <center><a href="#title-menu" class="explore" id="explore"><i class="fas fa-arrow-down arrow"></i><span
                         class="title">Explore</span></a></center>
 
         </div>
-        <svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+        <svg class="waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style="width: 100%;">
             <path fill="#ffffff" fill-opacity="1"
                 d="M0,64L24,85.3C48,107,96,149,144,144C192,139,240,85,288,90.7C336,96,384,160,432,202.7C480,245,528,267,576,250.7C624,235,672,181,720,144C768,107,816,85,864,96C912,107,960,149,1008,154.7C1056,160,1104,128,1152,106.7C1200,85,1248,75,1296,101.3C1344,128,1392,192,1416,224L1440,256L1440,320L1416,320C1392,320,1344,320,1296,320C1248,320,1200,320,1152,320C1104,320,1056,320,1008,320C960,320,912,320,864,320C816,320,768,320,720,320C672,320,624,320,576,320C528,320,480,320,432,320C384,320,336,320,288,320C240,320,192,320,144,320C96,320,48,320,24,320L0,320Z">
             </path>
@@ -74,40 +79,130 @@
 
         <article id="menu">
             <h1 id="title-menu">Menu</h1>
-            <div class="content-menu">
-                <div class="pict">
-                    <img src="./pict/americano.jpg">
-                </div>
-                <div class="desc">
-                    <svg class="wavy" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                        <path fill="#ffffff" fill-opacity="1"
-                            d="M0,96L80,128C160,160,320,224,480,213.3C640,203,800,117,960,80C1120,43,1280,53,1360,58.7L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z">
-                        </path>
-                    </svg>
-                    <h2>Americano</h2><br>
-                    <div class="text">
-                        <p>Espresso yang dipadukan dengan air panas, menghasilkan rasa kopi murni yang kuat dan
-                            sederhana.</p>
+
+            <div class="con">
+
+                <div class="content-menu">
+                    <div class="pict">
+                        <img src="./pict/americano.jpg">
                     </div>
-                    <div class="price">Rp.12.000 </div>
+                    <div class="desc">
+                        <svg class="wavy" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                            <path fill="#ffffff" fill-opacity="1"
+                                d="M0,96L80,128C160,160,320,224,480,213.3C640,203,800,117,960,80C1120,43,1280,53,1360,58.7L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z">
+                            </path>
+                        </svg>
+
+                        <h2>Americano</h2><br>
+                        <div class="text">
+                            <p>Espresso yang dipadukan dengan air panas, menghasilkan rasa kopi murni yang kuat dan
+                                sederhana.</p>
+                        </div>
+                        <div class="price">Rp18.000 </div>
+                    </div>
                 </div>
-            </div>
-            <div class="content-menu">
-                <div class="pict">
-                    <img src="./pict/latte.jpg">
+                <div class="content-menu">
+                    <div class="pict">
+                        <img src="./pict/latte.jpg">
+                    </div>
+
+                    <div class="desc">
+                        <svg class="wavy" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                            <path fill="#ffffff" fill-opacity="1"
+                                d="M0,96L80,128C160,160,320,224,480,213.3C640,203,800,117,960,80C1120,43,1280,53,1360,58.7L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z">
+                            </path>
+                        </svg>
+                        <h2>Coffee Latte</h2><br>
+                        <div class="text">
+                            <p>Kombinasi espresso dan susu hangat dengan tekstur creamy dan lembut.</p>
+                        </div>
+                        <div class="price">Rp25.000 </div>
+                    </div>
                 </div>
 
-                <div class="desc">
-                    <svg class="wavy" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-                        <path fill="#ffffff" fill-opacity="1"
-                            d="M0,96L80,128C160,160,320,224,480,213.3C640,203,800,117,960,80C1120,43,1280,53,1360,58.7L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z">
-                        </path>
-                    </svg>
-                    <h2>Coffee Latte</h2><br>
-                    <div class="text">
-                        <p>Kombinasi espresso dan susu hangat dengan tekstur creamy dan lembut.</p>
+                <div class="content-menu">
+                    <div class="pict">
+                        <img src="./pict/sanger.jpg">
                     </div>
-                    <div class="price">Rp.15.000 </div>
+
+                    <div class="desc">
+                        <svg class="wavy" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                            <path fill="#ffffff" fill-opacity="1"
+                                d="M0,96L80,128C160,160,320,224,480,213.3C640,203,800,117,960,80C1120,43,1280,53,1360,58.7L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z">
+                            </path>
+                        </svg>
+                        <h2>Sanger</h2><br>
+                        <div class="text">
+                            <p>
+                                Kopi robusta Aceh berpadu susu kental manis, rasa kuat dan creamy khas kopi sanger.
+                            </p>
+                        </div>
+                        <div class="price">Rp16.000 </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="con">
+
+                <div class="content-menu">
+                    <div class="pict">
+                        <img src="./pict/matcha.jpg">
+                    </div>
+
+                    <div class="desc">
+                        <svg class="wavy" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                            <path fill="#ffffff" fill-opacity="1"
+                                d="M0,96L80,128C160,160,320,224,480,213.3C640,203,800,117,960,80C1120,43,1280,53,1360,58.7L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z">
+                            </path>
+                        </svg>
+                        <h2>Matcha Latte</h2><br>
+                        <div class="text">
+                            <p>
+                                Matcha premium berpadu susu lembut, rasa creamy dengan aroma teh hijau yang menenangkan.
+                            </p>
+                        </div>
+                        <div class="price">Rp25.000 </div>
+                    </div>
+                </div>
+
+                <div class="content-menu">
+                    <div class="pict">
+                        <img src="./pict/croisant.jpg">
+                    </div>
+
+                    <div class="desc">
+                        <svg class="wavy" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                            <path fill="#ffffff" fill-opacity="1"
+                                d="M0,96L80,128C160,160,320,224,480,213.3C640,203,800,117,960,80C1120,43,1280,53,1360,58.7L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z">
+                            </path>
+                        </svg>
+                        <h2>Croissant</h2><br>
+                        <div class="text">
+                            <p>
+                                Croissant renyah berlapis mentega, lembut dan harum.</p>
+                        </div>
+                        <div class="price">Rp18.000 </div>
+                    </div>
+                </div>
+
+                <div class="content-menu">
+                    <div class="pict">
+                        <img src="./pict/cinnamon.jpg">
+                    </div>
+                    <div class="desc">
+                        <svg class="wavy" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                            <path fill="#ffffff" fill-opacity="1"
+                                d="M0,96L80,128C160,160,320,224,480,213.3C640,203,800,117,960,80C1120,43,1280,53,1360,58.7L1440,64L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z">
+                            </path>
+                        </svg>
+                        <h2>Cinnamon Roll</h2><br>
+                        <div class="text">
+                            <p>
+                                Cinnamon Roll – Roti gulung lembut beraroma kayu manis dengan lapisan karamel dan glasir
+                                manis. </p>
+                        </div>
+                        <div class="price">Rp20.000 </div>
+                    </div>
                 </div>
             </div>
         </article>

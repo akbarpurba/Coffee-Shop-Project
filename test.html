@@ -1,29 +1,276 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>P</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
-<body style="background-color: black;">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 200" preserveAspectRatio="none" style="width:100%; height:auto; display:block;">
-  <path fill="#ffffff" d="
-    M0,100 
-    Q60,120 120,100 
-    T240,100 
-    T360,100 
-    T480,100 
-    T600,100 
-    T720,100 
-    T840,100 
-    T960,100 
-    T1080,100 
-    T1200,100 
-    T1320,100 
-    T1440,100 
-    L1440,200 
-    L0,200 Z"></path>
-</svg>
+
+<body>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      width: 100%;
+    }
+
+   
+    html {
+      font-size: 16px;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    header {
+      background-color: white;
+      width: 100vw;
+      height: auto;
+      padding: 3% 4%;
+      display: flex;
+      flex-direction: row;
+      box-shadow: 1px 1px 3px #e6e6e6;
+    }
+
+    #nav {
+      width: 100vw;
+      height: 70vh;
+      color: #0c141c;
+      background-color: white;
+      top: 0;
+      flex-direction: column;
+
+      top: 0;
+
+    }
+
+    header .title {
+      width: 60%;
+      margin: 0;
+      padding: 0;
+
+    }
+
+     .title h1 {
+      background-color: #0c141c;
+      color: white;
+      border-radius: 10px;
+      font-size: 1.5rem;
+      letter-spacing: normal;
+      width: fit-content;
+      padding: 3% 3%;
+      animation:anime 3s infinite linear;
+      
+    }
+
+    @keyframes anime{
+      0%{
+        transform: rotate3d(0,0,1, 0deg);
+        color: white;
+      }
+      20%{
+        transform: rotate3d(0,0,1, 72deg);
+        color: red;
+      }
+      40%{
+        transform: rotate3d(0,0,1, 144deg);
+     color: white;
+      }
+      60%{
+        transform: rotate3d(0,0,1, 216deg);
+       color: red;
+      }
+      80%{
+        transform: rotate3d(0,0,1, 288deg);
+  color: white;
+      }
+      100%{
+        transform: rotate3d(0,0,1, 360deg);
+     color: red;
+      }
+    }
+
+    header .toggle {
+      width: 40%;
+      transition: all 0.5s ease;
+      display: flex;
+      height: 40%;
+      z-index: 6;
+      justify-content: right;
+    }
+
+    .toggle button {
+      float: right;
+      width: 23%;
+      transition: all 0.8s ease;
+      aspect-ratio: 1 / 1;
+      height: 23%;
+      font-size: 1.1rem;
+      background: transparent;
+      border: 2px solid #e6e6e6;
+      border-radius: 0%;
+      cursor: pointer;
+      border-radius: 20%;
+      transform: rotate3d(0, 0, 1, 0deg);
+    }
+
+    .toggle i {
+      transition: all 0.8s ease;
+      transform: rotate3d(0, 0, 1, 0deg);
+    }
+
+    .toggle button:hover {
+      color: #5356FF;
+
+      border-radius: 50%;
+      border: 2px solid #5356FF;
+    }
+
+    button:hover i {
+      transform: rotate3d(0, 0, 1, 180deg);
+      transition: all 0.5s ease;
+    }
+   
+    #nav .list {
+      position: absolute;
+      transition: all 0.5s ease;
+      width: 100%;
+      z-index: 5;
+      height: 70dvh;
+      font-size: 1.3rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .list li {
+      transform: translateY(10px);
+      list-style: none;
+      padding: 30% 0;
+    }
+    li:hover{
+      text-decoration: underline;
+      cursor: pointer;
+    }
+    main {
+
+
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      z-index: 0;
+
+    }
+    main h2{
+      text-align: center;
+      font-size: 1.2rem;
+      padding: 2rem 0 0 0;
+    }
+    main p{
+      text-align: justify;
+      font-style: oblique;
+      text-shadow:1px 1px 2px #0c141c;
+      padding:30px;
+      line-height: 30px;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    .icon-color {
+      color: red;
+      border: 2px solid red;
+    }
+
+
+  </style>
+  <header>
+    <div class="title">
+      <h1>Akbr<font style="margin-left:2px;padding:1.5px 2px;color:black;background:orange;border-radius:3px;">
+        Dev
+        </font>
+      </h1>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    
+
+
+    
+    <div class="toggle">
+      <button onclick="nav.hidden^=1" id="toggle"><i id="icon" class="fas fa-bars"></i></button>
+    </div>
+  </header>
+  <div id="nav" hidden>
+    <div class="list">
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+        <li>Blog</li>
+      </ul>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <main>
+
+
+
+
+
+
+    <h2><u><i>The Lorem ipsum</i></u></h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, pariatur! Nihil necessitatibus aperiam
+      ratione deleniti amet eius ab soluta nam quia, magni eligendi, explicabo vel, recusandae itaque sunt architecto
+      officiis.</p>
+  </main>
+
+  <script>
+    const toggle = document.getElementById('toggle');
+    const icon = document.getElementById('icon');
+    
+    toggle.addEventListener("clik", () => {
+      // Toggle class icon
+      if (icon.classList.contains("fa-bars")) {
+        icon.classList.remove("fa-bars");
+        icon.classList.add("fa-close")
+        toggle.classList.add("icon-color");
+
+      } else {
+        icon.classList.remove("fa-close", "icon-color");
+        icon.classList.add("fa-bars");
+        toggle.classList.remove("icon-color");
+      }
+    });
+  </script>
 
 </body>
+
+
 </html>
